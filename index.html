@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="google-site-verification" content="0GoTL9hCgwktaTNu2t-vsFf9aqm-kxb9xwoGWEwZyS0" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>fojizen | Frontend Developer & UI/UX Designer</title>
-<meta name="description" content="fojizen — frontend developer, UI/UX designer and digital creator. Building minimal, powerful digital experiences with code and design.">
+<title data-i18n="page.title">fojizen | Frontend Developer & UI/UX Designer</title>
+<meta name="description" data-i18n="page.description" content="fojizen — frontend developer, UI/UX designer and digital creator. Building minimal, powerful digital experiences with code and design.">
 <meta name="keywords" content="fojizen, portfolio, frontend developer, UI UX designer, web developer, digital creator, javascript, css, html">
 <meta name="author" content="fojizen">
 <meta name="robots" content="index, follow">
@@ -17,18 +17,21 @@
 <!-- Open Graph (social preview) -->
 <meta name="application-name" content="fojizen — portfolio">
 <meta name="apple-mobile-web-app-title" content="fojizen — portfolio">
-<meta property="og:title" content="fojizen — portfolio">
-<meta property="og:description" content="Frontend developer & digital creator. Building minimal, powerful digital experiences.">
+<meta property="og:title" data-i18n="page.ogTitle" content="fojizen — portfolio">
+<meta property="og:description" data-i18n="page.ogDescription" content="Frontend developer & digital creator. Building minimal, powerful digital experiences.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://fojizen.vercel.app/">
 <meta property="og:image" content="https://fojizen.vercel.app/fojizenportfolio.png">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="fojizen — portfolio">
-<meta name="twitter:description" content="Frontend developer & digital creator. Building minimal, powerful digital experiences.">
+<meta name="twitter:title" data-i18n="page.twitterTitle" content="fojizen — portfolio">
+<meta name="twitter:description" data-i18n="page.twitterDescription" content="Frontend developer & digital creator. Building minimal, powerful digital experiences.">
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="portfolio.css">
 
 <script type="application/ld+json">
@@ -57,11 +60,16 @@
 <nav>
   <a href="#" class="nav-logo">fojizen</a>
   <ul class="nav-links">
-    <li><a href="#about">about</a></li>
-    <li><a href="#skills">skills</a></li>
-    <li><a href="#projects">projects</a></li>
-    <li><a href="#contact">contact</a></li>
+    <li><a href="#about" data-i18n="nav.about">about</a></li>
+    <li><a href="#skills" data-i18n="nav.skills">skills</a></li>
+    <li><a href="#projects" data-i18n="nav.projects">projects</a></li>
+    <li><a href="#contact" data-i18n="nav.contact">contact</a></li>
   </ul>
+  <div class="lang-switcher" id="langSwitcher">
+    <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+    <span class="lang-divider">/</span>
+    <button class="lang-btn" data-lang="tr" aria-label="Türkçe">TR</button>
+  </div>
   <div class="hamburger" id="hamburger">
     <span></span><span></span><span></span>
   </div>
@@ -69,10 +77,10 @@
 
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#about">about</a>
-  <a href="#skills">skills</a>
-  <a href="#projects">projects</a>
-  <a href="#contact">contact</a>
+  <a href="#about" data-i18n="nav.about">about</a>
+  <a href="#skills" data-i18n="nav.skills">skills</a>
+  <a href="#projects" data-i18n="nav.projects">projects</a>
+  <a href="#contact" data-i18n="nav.contact">contact</a>
 </div>
 
 <!-- Hero -->
@@ -83,20 +91,20 @@
   <div class="orb orb-3"></div>
 
   <div class="hero-content">
-    <p class="hero-tag">// digital creator &amp; developer</p>
+    <p class="hero-tag" data-i18n="hero.tag">// digital creator & developer</p>
     <h1 class="hero-name glitch" data-text="fojizen">fojizen</h1>
-    <p class="hero-subtitle">
+    <p class="hero-subtitle" data-i18n="hero.subtitle">
       Coding in the dark,<br>
-      building digital worlds in <span>purple light</span>.
+      building digital worlds in <span data-i18n="hero.purpleLight">purple light</span>.
     </p>
     <div class="hero-cta">
-      <a href="#projects" class="btn-primary">view projects</a>
-      <a href="#contact" class="btn-ghost">get in touch</a>
+      <a href="#projects" class="btn-primary" data-i18n="hero.viewProjects">view projects</a>
+      <a href="#contact" class="btn-ghost" data-i18n="hero.getInTouch">get in touch</a>
     </div>
   </div>
 
   <div class="scroll-indicator">
-    <span>scroll</span>
+    <span data-i18n="hero.scroll">scroll</span>
     <div class="scroll-line"></div>
   </div>
 </section>
@@ -118,16 +126,16 @@
       <div class="about-text reveal">
         <div class="section-header section-header--about">
           <span class="section-number">// 01</span>
-          <h2 class="section-title">about me</h2>
+          <h2 class="section-title" data-i18n="about.title">about me</h2>
           <div class="section-line"></div>
         </div>
         <div class="status-badge">
           <span class="status-dot"></span>
-          available — open for projects
+          <span data-i18n="about.available">available — open for projects</span>
         </div>
-        <p>Hey, I'm <span>fojizen</span>. I write code in the dark corners of the digital world, designing minimal yet powerful experiences.</p>
-        <p>I approach every project with an <span>artist's eye</span>, blending technique with aesthetics. Glowing like purple light on a black canvas is my style.</p>
-        <p>I'm actively working in frontend development, UI/UX design, and digital content creation.</p>
+        <p data-i18n="about.p1">Hey, I'm <span>fojizen</span>. I write code in the dark corners of the digital world, designing minimal yet powerful experiences.</p>
+        <p data-i18n="about.p2">I approach every project with an <span data-i18n="about.artistsEye">artist's eye</span>, blending technique with aesthetics. Glowing like purple light on a black canvas is my style.</p>
+        <p data-i18n="about.p3">I'm actively working in frontend development, UI/UX design, and digital content creation.</p>
       </div>
     </div>
   </div>
@@ -138,49 +146,49 @@
   <div class="container">
     <div class="section-header reveal">
       <span class="section-number">// 02</span>
-      <h2 class="section-title">skills</h2>
+      <h2 class="section-title" data-i18n="skills.title">skills</h2>
       <div class="section-line"></div>
     </div>
     <div class="skills-grid">
       <div class="skill-card reveal" data-delay="0">
         <span class="skill-icon">&#x2B21;</span>
-        <div class="skill-name">frontend dev</div>
-        <p class="skill-desc">Building modern and responsive interfaces with HTML, CSS, JavaScript, and React.</p>
+        <div class="skill-name" data-i18n="skills.frontend.name">frontend dev</div>
+        <p class="skill-desc" data-i18n="skills.frontend.desc">Building modern and responsive interfaces with HTML, CSS, JavaScript, and React.</p>
         <div class="skill-bar"><div class="skill-fill" style="--target-width:90%"></div></div>
         <span class="skill-percent">90%</span>
       </div>
       <div class="skill-card reveal" data-delay="100">
         <span class="skill-icon">&#x25C8;</span>
-        <div class="skill-name">UI / UX design</div>
-        <p class="skill-desc">Wireframes, prototypes, and visual design with Figma. User-centered experiences.</p>
+        <div class="skill-name" data-i18n="skills.uiux.name">UI / UX design</div>
+        <p class="skill-desc" data-i18n="skills.uiux.desc">Wireframes, prototypes, and visual design with Figma. User-centered experiences.</p>
         <div class="skill-bar"><div class="skill-fill" style="--target-width:85%"></div></div>
         <span class="skill-percent">85%</span>
       </div>
       <div class="skill-card reveal" data-delay="200">
         <span class="skill-icon">&#x25C7;</span>
-        <div class="skill-name">motion &amp; animation</div>
-        <p class="skill-desc">Interactive experiences brought to life with CSS animations, GSAP and Canvas.</p>
+        <div class="skill-name" data-i18n="skills.motion.name">motion & animation</div>
+        <p class="skill-desc" data-i18n="skills.motion.desc">Interactive experiences brought to life with CSS animations, GSAP and Canvas.</p>
         <div class="skill-bar"><div class="skill-fill" style="--target-width:80%"></div></div>
         <span class="skill-percent">80%</span>
       </div>
       <div class="skill-card reveal" data-delay="300">
         <span class="skill-icon">&#x2B22;</span>
-        <div class="skill-name">backend &amp; api</div>
-        <p class="skill-desc">Server-side development with Node.js and Python. REST API design and integration.</p>
+        <div class="skill-name" data-i18n="skills.backend.name">backend & api</div>
+        <p class="skill-desc" data-i18n="skills.backend.desc">Server-side development with Node.js and Python. REST API design and integration.</p>
         <div class="skill-bar"><div class="skill-fill" style="--target-width:70%"></div></div>
         <span class="skill-percent">70%</span>
       </div>
       <div class="skill-card reveal" data-delay="100">
         <span class="skill-icon">&#x25C9;</span>
-        <div class="skill-name">digital content</div>
-        <p class="skill-desc">Visual design, social media content, and brand identity creation.</p>
+        <div class="skill-name" data-i18n="skills.content.name">digital content</div>
+        <p class="skill-desc" data-i18n="skills.content.desc">Visual design, social media content, and brand identity creation.</p>
         <div class="skill-bar"><div class="skill-fill" style="--target-width:88%"></div></div>
         <span class="skill-percent">88%</span>
       </div>
       <div class="skill-card reveal" data-delay="200">
         <span class="skill-icon">&#x25C8;</span>
-        <div class="skill-name">problem solving</div>
-        <p class="skill-desc">The capacity to produce creative and efficient solutions to complex problems.</p>
+        <div class="skill-name" data-i18n="skills.problem.name">problem solving</div>
+        <p class="skill-desc" data-i18n="skills.problem.desc">The capacity to produce creative and efficient solutions to complex problems.</p>
         <div class="skill-bar"><div class="skill-fill" style="--target-width:95%"></div></div>
         <span class="skill-percent">95%</span>
       </div>
@@ -193,7 +201,7 @@
   <div class="container">
     <div class="section-header reveal">
       <span class="section-number">// 03</span>
-      <h2 class="section-title">projects</h2>
+      <h2 class="section-title" data-i18n="projects.title">projects</h2>
       <div class="section-line"></div>
     </div>
     <div class="projects-grid">
@@ -209,12 +217,12 @@
             <span class="tag">HTML/CSS</span>
             <span class="tag">JavaScript</span>
             <span class="tag">LocalStorage</span>
-            <span class="tag tag--beta">&#x1F6A7; beta</span>
+            <span class="tag tag--beta">&#x1F6A7; <span data-i18n="projects.tags.beta">beta</span></span>
           </div>
-          <h3 class="project-title">To Do List</h3>
-          <p class="project-desc">A clean and minimal task management app. Add, complete, and delete tasks &#8212; your progress is saved automatically.</p>
-          <p class="project-note">&#x26A0; This project is currently in development and being tested. Some features may be incomplete or subject to change.</p>
-          <a href="https://github.com/fojizen/todo-app" class="project-link" target="_blank" rel="noopener noreferrer">explore</a>
+          <h3 class="project-title" data-i18n="projects.todo.title">To Do List</h3>
+          <p class="project-desc" data-i18n="projects.todo.desc">A clean and minimal task management app. Add, complete, and delete tasks &#8212; your progress is saved automatically.</p>
+          <p class="project-note" data-i18n="projects.todo.note">&#x26A0; This project is currently in development and being tested. Some features may be incomplete or subject to change.</p>
+          <a href="https://github.com/fojizen/todo-app" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="projects.link">explore</a>
         </div>
       </div>
 
@@ -230,10 +238,10 @@
             <span class="tag">JavaScript</span>
             <span class="tag">Canvas</span>
           </div>
-          <h3 class="project-title">AutoClickerPro</h3>
-          <p class="project-desc">Advanced auto-clicker with customizable intervals, hotkeys, click patterns, and macro recording. Built with vanilla JS for Windows automation.</p>
-          <p class="project-note">&#x26A0; Windows only &#8212; requires admin for global hotkeys</p>
-          <a href="https://github.com/fojizen/AutoClickerPro" class="project-link" target="_blank" rel="noopener noreferrer">explore</a>
+          <h3 class="project-title" data-i18n="projects.autoclicker.title">AutoClickerPro</h3>
+          <p class="project-desc" data-i18n="projects.autoclicker.desc">Advanced auto-clicker with customizable intervals, hotkeys, click patterns, and macro recording. Built with vanilla JS for Windows automation.</p>
+          <p class="project-note" data-i18n="projects.autoclicker.note">&#x26A0; Windows only &#8212; requires admin for global hotkeys</p>
+          <a href="https://github.com/fojizen/AutoClickerPro" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="projects.link">explore</a>
         </div>
       </div>
 
@@ -246,26 +254,26 @@
   <div class="container">
     <div class="section-header section-header--center reveal">
       <span class="section-number">// 04</span>
-      <h2 class="section-title">contact</h2>
+      <h2 class="section-title" data-i18n="contact.title">contact</h2>
       <div class="section-line section-line--center"></div>
     </div>
     <div class="contact-inner">
-      <p class="contact-text reveal">
+      <p class="contact-text reveal" data-i18n="contact.text">
         Got a project idea? Let's build something together.<br>
-        Every great thing starts with a conversation — let's start that conversation.
+        Every great thing starts with a conversation &#8212; let's start that conversation.
       </p>
       <div class="contact-links reveal">
         <a href="mailto:furknnyildirim@gmail.com" class="contact-item" target="_blank" rel="noopener noreferrer">
-          <span>&#x2709;</span> email
+          <span>&#x2709;</span> <span data-i18n="contact.email">email</span>
         </a>
         <a href="https://github.com/fojizen" class="contact-item" target="_blank" rel="noopener noreferrer">
-          <span>&#x25C7;</span> github
+          <span>&#x25C7;</span> <span data-i18n="contact.github">github</span>
         </a>
         <a href="https://www.instagram.com/fojizen/" class="contact-item" target="_blank" rel="noopener noreferrer">
-          <span>&#x25C9;</span> instagram
+          <span>&#x25C9;</span> <span data-i18n="contact.instagram">instagram</span>
         </a>
         <a href="https://www.reddit.com/user/fojizen/" class="contact-item" target="_blank" rel="noopener noreferrer">
-          <span>&#x2B22;</span> reddit
+          <span>&#x2B22;</span> <span data-i18n="contact.reddit">reddit</span>
         </a>
       </div>
     </div>
@@ -273,7 +281,7 @@
 </section>
 
 <footer>
-  <p class="footer-text">&copy; 2026 <span>fojizen</span> — all rights reserved. code is written in the dark.</p>
+  <p class="footer-text" data-i18n="footer.text">&copy; 2026 <span>fojizen</span> &#8212; all rights reserved. code is written in the dark.</p>
 </footer>
 
 <script src="portfolio.js"></script>

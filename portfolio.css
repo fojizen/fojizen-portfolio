@@ -72,7 +72,8 @@ body.is-touch a,
 body.is-touch button,
 body.is-touch .skill-card,
 body.is-touch .project-card,
-body.is-touch .hamburger {
+body.is-touch .hamburger,
+body.is-touch .lang-btn {
   cursor: pointer;
 }
 
@@ -88,7 +89,7 @@ body.is-touch .hamburger {
   transition: transform var(--duration-fast) ease, width var(--duration-normal) ease, height var(--duration-normal) ease, opacity var(--duration-normal) ease;
   box-shadow: 0 0 20px var(--purple-glow), 0 0 40px var(--purple-mid);
   mix-blend-mode: screen;
-  will-change: left, top;
+  will-change: transform, width, height, opacity;
 }
 .cursor-ring {
   width: 36px; height: 36px;
@@ -100,7 +101,7 @@ body.is-touch .hamburger {
   transform: translate(-50%, -50%);
   transition: transform 0.18s ease, width var(--duration-normal) ease, height var(--duration-normal) ease, opacity var(--duration-normal) ease;
   opacity: 0.6;
-  will-change: left, top;
+  will-change: transform, width, height, opacity;
 }
 body:hover .cursor { opacity: 1; }
 
@@ -137,8 +138,8 @@ nav {
   z-index: var(--z-nav);
   padding: var(--space-lg) var(--space-xl);
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: var(--space-lg);
   background: linear-gradient(to bottom, rgba(5,5,10,0.95), transparent);
   backdrop-filter: blur(8px);
 }
@@ -151,12 +152,14 @@ nav {
   text-shadow: 0 0 20px var(--purple-mid);
   letter-spacing: 0.2em;
   text-decoration: none;
+  margin-right: auto;
 }
 
 .nav-links {
   display: flex;
   gap: 2.5rem;
   list-style: none;
+  margin-right: auto;
 }
 
 .nav-links a {
@@ -185,6 +188,57 @@ nav {
 }
 
 .nav-links a:hover::after { width: 100%; }
+
+/* ===== LANG SWITCHER ===== */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lang-divider {
+  color: var(--grey);
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  color: var(--grey);
+  font-family: 'Space Mono', monospace;
+  font-size: var(--text-xs);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  transition: color var(--duration-fast) ease, text-shadow var(--duration-fast) ease;
+  position: relative;
+}
+
+.lang-btn::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0;
+  width: 0; height: 1px;
+  background: var(--purple-glow);
+  transition: width var(--duration-normal) ease;
+  box-shadow: 0 0 6px var(--purple-mid);
+}
+
+.lang-btn:hover {
+  color: var(--purple-glow);
+  text-shadow: 0 0 10px var(--purple-mid);
+}
+
+.lang-btn:hover::after { width: 100%; }
+
+.lang-btn.active {
+  color: var(--purple-glow);
+  text-shadow: 0 0 12px var(--purple-mid);
+}
+
+.lang-btn.active::after { width: 100%; }
 
 /* ===== HAMBURGER ===== */
 .hamburger {
@@ -784,47 +838,6 @@ section {
   flex-direction: column;
 }
 
-.project-thumb-bg {
-  position: absolute;
-  inset: 0;
-  transition: transform 0.6s ease;
-}
-
-.project-thumb-bg--1 {
-  background: linear-gradient(135deg, #1a0a2e 0%, #2d1258 50%, #0a0a14 100%);
-}
-
-.project-card:hover .project-thumb-bg { transform: scale(1.05); }
-
-.project-thumb-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(5,5,10,0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.project-card:hover .project-thumb-overlay { opacity: 1; }
-
-.project-thumb-icon {
-  font-size: 3rem;
-  filter: drop-shadow(0 0 20px rgba(232,121,249,0.8));
-}
-
-.project-num {
-  position: absolute;
-  top: 1rem; left: 1rem;
-  font-family: 'Orbitron', sans-serif;
-  font-size: var(--text-xs);
-  letter-spacing: 0.3em;
-  color: rgba(232,121,249,0.6);
-}
-
-.project-body { padding: 1.8rem; }
-
 .project-tags {
   display: flex;
   gap: 0.5rem;
@@ -1036,6 +1049,9 @@ footer {
   }
   nav { padding: 1.2rem 1.5rem; }
   .nav-links { display: none; }
+  .lang-switcher { margin-left: 1rem; gap: 0.25rem; }
+  .lang-divider { display: none; }
+  .lang-btn { padding: 0.2rem 0.4rem; font-size: 0.55rem; }
   .hamburger { display: flex; }
 
   .about-grid {
