@@ -83,6 +83,7 @@
         text: 'Got a project idea? Let\'s build something together.<br>Every great thing starts with a conversation — let\'s start that conversation.',
         email: 'email',
         github: 'github',
+        linkedin: 'linkedin',
         instagram: 'instagram',
         reddit: 'reddit'
       },
@@ -170,6 +171,7 @@
         text: 'Bir proje fikriniz var? Birlikte bir şeyler yapalım.<br>Her harika şey bir sohbetle başlar — o sohbeti başlatalım.',
         email: 'e-posta',
         github: 'github',
+        linkedin: 'linkedin',
         instagram: 'instagram',
         reddit: 'reddit'
       },
