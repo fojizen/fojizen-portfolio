@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>fojizen | Frontend Developer & UI/UX Designer</title>
 <meta name="description" content="fojizen — frontend developer, UI/UX designer and digital creator. Building minimal, powerful digital experiences with code and design.">
-<meta name="keywords" content="fojizen, portfolio, frontend developer, UI UX designer, web developer, digital creator, react, javascript">
+<meta name="keywords" content="fojizen, portfolio, frontend developer, UI UX designer, web developer, digital creator, javascript, css, html">
 <meta name="author" content="fojizen">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://fojizen.vercel.app/">
 <link rel="icon" type="image/png" href="/fojizen.png">
-  <meta property="og:site_name" content="Fojizen">
-  <meta name="theme-color" content="#000000">
-  <link rel="manifest" href="/manifest.json">
+<meta property="og:site_name" content="Fojizen">
+<meta name="theme-color" content="#000000">
+<link rel="manifest" href="/manifest.json">
 <!-- Open Graph (social preview) -->
 <meta name="application-name" content="fojizen — portfolio">
 <meta name="apple-mobile-web-app-title" content="fojizen — portfolio">
@@ -21,6 +21,7 @@
 <meta property="og:description" content="Frontend developer & digital creator. Building minimal, powerful digital experiences.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://fojizen.vercel.app/">
+<meta property="og:image" content="https://fojizen.vercel.app/fojizenportfolio.png">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary">
@@ -30,7 +31,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="portfolio.css">
 
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -68,10 +69,10 @@
 
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#about" onclick="closeMobile()">about</a>
-  <a href="#skills" onclick="closeMobile()">skills</a>
-  <a href="#projects" onclick="closeMobile()">projects</a>
-  <a href="#contact" onclick="closeMobile()">contact</a>
+  <a href="#about">about</a>
+  <a href="#skills">skills</a>
+  <a href="#projects">projects</a>
+  <a href="#contact">contact</a>
 </div>
 
 <!-- Hero -->
@@ -110,12 +111,12 @@
           <div class="corner-decoration tr"></div>
           <div class="corner-decoration bl"></div>
           <div class="corner-decoration br"></div>
-          <div class="about-avatar">FJ</div>
+          <div class="about-avatar" aria-label="fojizen avatar">FJ</div>
         </div>
         <div class="about-offset-box"></div>
       </div>
       <div class="about-text reveal">
-        <div class="section-header" style="margin-bottom:2rem">
+        <div class="section-header section-header--about">
           <span class="section-number">// 01</span>
           <h2 class="section-title">about me</h2>
           <div class="section-line"></div>
@@ -141,43 +142,43 @@
       <div class="section-line"></div>
     </div>
     <div class="skills-grid">
-      <div class="skill-card reveal">
-        <span class="skill-icon">⬡</span>
+      <div class="skill-card reveal" data-delay="0">
+        <span class="skill-icon">&#x2B21;</span>
         <div class="skill-name">frontend dev</div>
         <p class="skill-desc">Building modern and responsive interfaces with HTML, CSS, JavaScript, and React.</p>
         <div class="skill-bar"><div class="skill-fill" style="--target-width:90%"></div></div>
         <span class="skill-percent">90%</span>
       </div>
-      <div class="skill-card reveal" style="transition-delay:0.1s">
-        <span class="skill-icon">◈</span>
+      <div class="skill-card reveal" data-delay="100">
+        <span class="skill-icon">&#x25C8;</span>
         <div class="skill-name">UI / UX design</div>
         <p class="skill-desc">Wireframes, prototypes, and visual design with Figma. User-centered experiences.</p>
         <div class="skill-bar"><div class="skill-fill" style="--target-width:85%"></div></div>
         <span class="skill-percent">85%</span>
       </div>
-      <div class="skill-card reveal" style="transition-delay:0.2s">
-        <span class="skill-icon">◇</span>
+      <div class="skill-card reveal" data-delay="200">
+        <span class="skill-icon">&#x25C7;</span>
         <div class="skill-name">motion &amp; animation</div>
         <p class="skill-desc">Interactive experiences brought to life with CSS animations, GSAP and Canvas.</p>
         <div class="skill-bar"><div class="skill-fill" style="--target-width:80%"></div></div>
         <span class="skill-percent">80%</span>
       </div>
-      <div class="skill-card reveal" style="transition-delay:0.3s">
-        <span class="skill-icon">⬢</span>
+      <div class="skill-card reveal" data-delay="300">
+        <span class="skill-icon">&#x2B22;</span>
         <div class="skill-name">backend &amp; api</div>
         <p class="skill-desc">Server-side development with Node.js and Python. REST API design and integration.</p>
         <div class="skill-bar"><div class="skill-fill" style="--target-width:70%"></div></div>
         <span class="skill-percent">70%</span>
       </div>
-      <div class="skill-card reveal" style="transition-delay:0.1s">
-        <span class="skill-icon">◉</span>
+      <div class="skill-card reveal" data-delay="100">
+        <span class="skill-icon">&#x25C9;</span>
         <div class="skill-name">digital content</div>
         <p class="skill-desc">Visual design, social media content, and brand identity creation.</p>
         <div class="skill-bar"><div class="skill-fill" style="--target-width:88%"></div></div>
         <span class="skill-percent">88%</span>
       </div>
-      <div class="skill-card reveal" style="transition-delay:0.2s">
-        <span class="skill-icon">◈</span>
+      <div class="skill-card reveal" data-delay="200">
+        <span class="skill-icon">&#x25C8;</span>
         <div class="skill-name">problem solving</div>
         <p class="skill-desc">The capacity to produce creative and efficient solutions to complex problems.</p>
         <div class="skill-bar"><div class="skill-fill" style="--target-width:95%"></div></div>
@@ -199,8 +200,8 @@
 
       <div class="project-card reveal">
         <div class="project-thumb">
-          <div class="project-thumb-bg" style="background: linear-gradient(135deg, #1a0a2e 0%, #2d1258 50%, #0a0a14 100%);"></div>
-          <div class="project-thumb-overlay"><span class="project-thumb-icon">✓</span></div>
+          <div class="project-thumb-bg project-thumb-bg--1"></div>
+          <div class="project-thumb-overlay"><span class="project-thumb-icon">&#x2713;</span></div>
           <span class="project-num">// p01</span>
         </div>
         <div class="project-body">
@@ -208,12 +209,31 @@
             <span class="tag">HTML/CSS</span>
             <span class="tag">JavaScript</span>
             <span class="tag">LocalStorage</span>
-            <span class="tag" style="border-color:rgba(234,179,8,0.5);color:#fde047;background:rgba(234,179,8,0.08);">🚧 beta</span>
+            <span class="tag tag--beta">&#x1F6A7; beta</span>
           </div>
           <h3 class="project-title">To Do List</h3>
-          <p class="project-desc">A clean and minimal task management app. Add, complete, and delete tasks — your progress is saved automatically.</p>
-          <p style="font-size:0.7rem;color:rgba(253,224,71,0.6);margin-bottom:1.2rem;margin-top:-0.8rem;line-height:1.6;">⚠ This project is currently in development and being tested. Some features may be incomplete or subject to change.</p>
-          <a href="https://fojizen.github.io/todo-app/" class="project-link" target="_blank">explore</a>
+          <p class="project-desc">A clean and minimal task management app. Add, complete, and delete tasks &#8212; your progress is saved automatically.</p>
+          <p class="project-note">&#x26A0; This project is currently in development and being tested. Some features may be incomplete or subject to change.</p>
+          <a href="https://github.com/fojizen/todo-app" class="project-link" target="_blank" rel="noopener noreferrer">explore</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-thumb">
+          <div class="project-thumb-bg project-thumb-bg--1"></div>
+          <div class="project-thumb-overlay"><span class="project-thumb-icon">&#x1F3AE;</span></div>
+          <span class="project-num">// p02</span>
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="tag">HTML/CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Canvas</span>
+          </div>
+          <h3 class="project-title">AutoClickerPro</h3>
+          <p class="project-desc">Advanced auto-clicker with customizable intervals, hotkeys, click patterns, and macro recording. Built with vanilla JS for Windows automation.</p>
+          <p class="project-note">&#x26A0; Windows only &#8212; requires admin for global hotkeys</p>
+          <a href="https://github.com/fojizen/AutoClickerPro" class="project-link" target="_blank" rel="noopener noreferrer">explore</a>
         </div>
       </div>
 
@@ -224,10 +244,10 @@
 <!-- Contact -->
 <section id="contact">
   <div class="container">
-    <div class="section-header reveal" style="text-align:center; margin-bottom:3rem">
-      <span class="section-number" style="display:block; text-align:center">// 04</span>
+    <div class="section-header section-header--center reveal">
+      <span class="section-number">// 04</span>
       <h2 class="section-title">contact</h2>
-      <div class="section-line" style="margin:1.5rem auto 0"></div>
+      <div class="section-line section-line--center"></div>
     </div>
     <div class="contact-inner">
       <p class="contact-text reveal">
@@ -235,18 +255,17 @@
         Every great thing starts with a conversation — let's start that conversation.
       </p>
       <div class="contact-links reveal">
-        <a href="mailto:furknnyildirim@gmail.com" class="contact-item" target="_blank">>
-          <span>✉</span> email
+        <a href="mailto:furknnyildirim@gmail.com" class="contact-item" target="_blank" rel="noopener noreferrer">
+          <span>&#x2709;</span> email
         </a>
-       
-        <a href="https://github.com/fojizen" class="contact-item" target="_blank">
-          <span>◇</span> github
+        <a href="https://github.com/fojizen" class="contact-item" target="_blank" rel="noopener noreferrer">
+          <span>&#x25C7;</span> github
         </a>
-        <a href="https://www.instagram.com/fojizen/" class="contact-item" target="_blank">>
-          <span>◉</span> instagram
+        <a href="https://www.instagram.com/fojizen/" class="contact-item" target="_blank" rel="noopener noreferrer">
+          <span>&#x25C9;</span> instagram
         </a>
-        <a href="https://www.reddit.com/user/fojizen/" class="contact-item" target="_blank">>
-          <span>⬢</span> reddit
+        <a href="https://www.reddit.com/user/fojizen/" class="contact-item" target="_blank" rel="noopener noreferrer">
+          <span>&#x2B22;</span> reddit
         </a>
       </div>
     </div>
@@ -254,7 +273,7 @@
 </section>
 
 <footer>
-  <p class="footer-text">© 2024 <span>fojizen</span> — all rights reserved. code is written in the dark.</p>
+  <p class="footer-text">&copy; 2026 <span>fojizen</span> — all rights reserved. code is written in the dark.</p>
 </footer>
 
 <script src="portfolio.js"></script>
