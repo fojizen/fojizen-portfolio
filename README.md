@@ -74,7 +74,7 @@ This project is part of my personal branding as a Frontend Developer & UI/UX Des
 ## 📬 Contact
 
 - GitHub: https://github.com/fojizen  
-- LinkedIn: https://www.linkedin.com/in/furkan-60282841b/  
+- LinkedIn: https://www.linkedin.com/in/fojizen/  
 - Portfolio: https://fojizen.vercel.app  
 
 ---
