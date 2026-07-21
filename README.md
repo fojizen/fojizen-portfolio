@@ -90,9 +90,10 @@
 - **Meta tags:** title, description, keywords, canonical, robots
 - **Open Graph:** og:title, og:description, og:image (1200x630), og:url, og:locale
 - **Twitter Card:** summary_large_image with image
-- **JSON-LD:** Person schema (fojizen) + WebSite structured data
+- **JSON-LD:** Person schema (fojizen) + WebSite + SoftwareApplication structured data
+- **Cross-linking:** Mutual hreflang links with [Todo App](https://fojizen-todo-app.onrender.com)
 - **Favicon:** SVG, ICO, Apple Touch Icon, PNG
-- **Sitemap:** `/sitemap.xml`
+- **Sitemap:** `/sitemap.xml` (includes both sites)
 - **Google Site Verification:** verified
 
 ---
@@ -112,6 +113,14 @@
 - **LinkedIn:** [linkedin.com/in/fojizen](https://www.linkedin.com/in/fojizen/)
 - **Instagram:** [instagram.com/fojizen](https://www.instagram.com/fojizen/)
 - **Portfolio:** [fojizen.vercel.app](https://fojizen.vercel.app)
+
+---
+
+## Related Projects
+
+| Project | Description | Link |
+|---------|-------------|------|
+| **Todo App** | Full-stack task management app with PostgreSQL, OAuth2, and PWA | [Live](https://fojizen-todo-app.onrender.com) |
 
 ---
 
